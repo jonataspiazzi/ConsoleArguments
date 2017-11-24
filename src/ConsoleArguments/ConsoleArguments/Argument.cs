@@ -61,8 +61,8 @@ namespace ConsoleArguments
         public bool EqualsToArg(string argumentName)
         {
             if (string.Compare(Name, argumentName, !CaseSensitive) == 0) return true;
-            if (BindArgs == null) return false;
-            if (BindArgs.Any(a => string.Compare(a, argumentName, !CaseSensitive) == 0)) return true;
+            if (Alias == null) return false;
+            if (Alias.Any(a => string.Compare(a, argumentName, !CaseSensitive) == 0)) return true;
 
             return false;
         }
